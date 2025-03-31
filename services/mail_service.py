@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 import os
 import logging
 from datetime import datetime
+import streamlit as st
 
 # Configure logging
 logging.basicConfig(
@@ -14,8 +15,8 @@ logger = logging.getLogger(__name__)
 
 class EmailService:
     def __init__(self):
-        self.sender_email = os.getenv('VOL_LINK_EMAIL')
-        self.app_password = os.getenv('VOL_LINK_PASSWORD')
+        self.sender_email = st.secrets['VOL_LINK_EMAIL']
+        self.app_password = st.secrets['VOL_LINK_PASSWORD']
         self.smtp_server = 'smtp.gmail.com'
         self.smtp_port = 465
 
