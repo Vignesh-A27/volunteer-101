@@ -1,2 +1,23 @@
+[theme]
+base="light"
+primaryColor="#4a8786"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F8F9FA"
+textColor="#262626"
+font="sans serif"
+
+[browser]
+gatherUsageStats = false
+
 [client]
 showSidebarNavigation = false
+
+[server]
+headless = true
+enableXsrfProtection = false
+enableCORS = false
+runOnSave = true
+port = 8501
+maxUploadSize = 200
+
+[ui]
